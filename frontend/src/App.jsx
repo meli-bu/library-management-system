@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     async function loadBooks() {
       try {
-        const response = await fetch("http://localhost:5000/api/books");
+        const response = await fetch("https://booknest-api-a5xg.onrender.com/api/books");
 
         if (!response.ok) {
           throw new Error("Failed to load books");
@@ -80,7 +80,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/books", {
+      const response = await fetch("https://booknest-api-a5xg.onrender.com/api/books", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,7 +114,7 @@ function App() {
   async function toggleAvailability(book) {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/books/${book._id}`,
+        `https://booknest-api-a5xg.onrender.com/api/books/${book._id}`,
         {
           method: "PUT",
           headers: {
@@ -153,7 +153,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/books/${id}`,
+        `https://booknest-api-a5xg.onrender.com/api/books/${id}`,
         { method: "DELETE" }
       );
 
